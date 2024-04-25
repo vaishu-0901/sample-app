@@ -20,7 +20,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       
       - name: Build Docker image
-        run: docker build -t ./sample-service/Dockerfile .
+        run: docker build -t ./sample-service/Dockerfile:latest .
       
       - name: Push Docker image to Docker Hub
         run: docker push vaishnavi0102/image:latest
